@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PREMA</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<main>
+    <h1 class="text-center">COMING SOON</h1>
+    <div id="countdown" class="grid-x text-center">
+        <div class="column small-3 time">
+            <div id="days"></div>
+            <p>DAYS</p>
+        </div>
+        <div class="column small-3 time">
+            <div id="hours"></div>
+            <p>HOURS</p>
+        </div>
+        <div class="column small-3 time">
+            <div id="minutes"></div>
+            <p>MINUTES</p>
+        </div>
+        <div class="column small-3 time">
+            <div id="seconds"></div>
+            <p>SECONDS</p>
+        </div>
+    </div>
+</main>
+<script
+        src="https://code.jquery.com/jquery-2.2.0.min.js"
+        integrity="sha256-ihAoc6M/JPfrIiIeayPE9xjin4UWjsx2mjW/rtmxLM4="
+        crossorigin="anonymous">
+</script>
+<script src="js/jquery.countdown.js"></script>
+<script type="text/javascript">
+    $("#days")
+        .countdown("2018/08/01", function(event) {
+            $(this).text(
+                event.strftime('%D')
+            );
+        });
+    $("#hours")
+        .countdown("2018/08/01", function(event) {
+            $(this).text(
+                event.strftime('%H')
+            );
+        });
+    $("#minutes")
+        .countdown("2018/08/01", function(event) {
+            $(this).text(
+                event.strftime('%M')
+            );
+        });
+    $("#seconds")
+        .countdown("2018/08/01", function(event) {
+            $(this).text(
+                event.strftime('%S')
+            );
+        });
+</script>
+
+</body>
+</html>
