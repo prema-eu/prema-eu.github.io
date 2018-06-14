@@ -6,28 +6,37 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PREMA</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="http://prema.eu/favicon.png">
     <link rel="stylesheet" href="css/app.css">
+    <link href="css/flag-icon.css" rel="stylesheet">
 </head>
 <body>
+<div id="langChanger">
+    <a href="#" onclick="window.lang.change('en'); return false;">EN
+        <span class="flag-icon flag-icon-gb"></span></a>
+    <a href="#" onclick="window.lang.change('fr'); return false;">FR
+        <span class="flag-icon flag-icon-fr"></span></a>
+    <a href="#" onclick="window.lang.change('es'); return false;">ES
+        <span class="flag-icon flag-icon-es"></span></a>
+</div>
 <main>
-    <h1 class="text-center">COMING SOON</h1>
+    <h1 class="text-center" lang="en">COMING SOON</h1>
     <div id="countdown" class="grid-x text-center">
         <div class="column small-3 time">
             <div id="days"></div>
-            <p>DAYS</p>
+            <p lang="en">DAYS</p>
         </div>
         <div class="column small-3 time">
             <div id="hours"></div>
-            <p>HOURS</p>
+            <p lang="en">HOURS</p>
         </div>
         <div class="column small-3 time">
             <div id="minutes"></div>
-            <p>MINUTES</p>
+            <p lang="en">MINUTES</p>
         </div>
         <div class="column small-3 time">
             <div id="seconds"></div>
-            <p>SECONDS</p>
+            <p lang="en">SECONDS</p>
         </div>
     </div>
 </main>
@@ -63,6 +72,15 @@
             );
         });
 </script>
-
+<script src="js/js.cookie.js" charset="utf-8" type="text/javascript"></script>
+<script src="js/jquery-lang.js" charset="utf-8" type="text/javascript"></script>
+<script type="text/javascript">
+    var lang = new Lang();
+    lang.dynamic('fr', 'js/langpack/fr.json');
+    lang.dynamic('es', 'js/langpack/es.json');
+    lang.init({
+        defaultLang: 'en'
+    });
+</script>
 </body>
 </html>
